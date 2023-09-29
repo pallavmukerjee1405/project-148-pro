@@ -1,0 +1,71 @@
+<html>
+    <head>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    </head>
+
+    <body>
+        <a-scene>
+            <a-a-assets>
+
+                <a-asset-item id="bench" src="./assets/wooden_bench/scene.gltf"></a-asset-item>
+                <a-asset-item id="cat" src="./assets/an_animated_cat/scene.gltf"></a-asset-item>
+                <a-asset-item id="lamp" src="./assets/street_light/scene.gltf"></a-asset-item>
+                <a-asset-item id="girl" src="./assets/low_poly_sunny_girl/scene.gltf"></a-asset-item>
+                <a-asset-item id="street" src="./assets/road_free/scene.gltf"></a-asset-item>
+
+                <img id="bg" src="night.jpg">
+
+            </a-a-assets>
+
+            <a-sky src="#bg"></a-sky>
+
+            <!--Lighting the Scene-->
+            <a-entity light="type:point;castShadow:true;color:yellow;intensity:2.35" position="0 0.8 -6">
+                
+            </a-entity>
+
+            <a-entity light="type:ambient;"></a-entity>
+
+            <a-circle position="0 5 10" rotation="0 0 0" radius="100" shadow="receive: true" visible="true" color="#2E6F10"></a-circle>
+
+            <!--Street-->
+            <a-entity
+            position="0 0 3"
+            gltf-model="#street"
+            ></a-entity>
+
+            <!--Girl-->
+            <a-entity
+            position="-1 0.4 3"
+            scale="0.003 0.003 0.003"
+            gltf-model="#girl"
+            shadow="cast:true;"
+            ></a-entity>
+
+            <!--Cat-->
+            <a-entity
+            position="0 0.4 3"
+            scale="0.003 0.003 0.003"
+            gltf-model="#cat"
+            shadow="cast:true;"
+            ></a-entity>
+
+            <!--Bench-->
+            <a-entity
+            position="-2 0.4 5"
+            scale="0.003 0.003 0.003"
+            gltf-model="#bench"
+            shadow="cast:true;"
+            ></a-entity>
+
+            <!--Lamp-->
+            <a-entity
+            position="-3 0.4 3"
+            scale="0.003 0.003 0.003 0.003"
+            gltf-model="#lamp"
+            shadow="cast:true;"
+            ></a-entity>
+
+        </a-scene>
+    </body>
+</html>
